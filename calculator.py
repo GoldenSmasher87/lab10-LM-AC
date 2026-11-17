@@ -1,12 +1,13 @@
+# https://github.com/GoldenSmasher87/lab10-LM-AC
+# Partner 1: Lucas Mattos
+# Partner 2: Abidul Chowdhury
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
-# https://github.com/GoldenSmasher87/lab10-LM-AC
-# Partner 1: Lucas Mattos
-# Partner 2: Abidul Chowdhury
+
 
 import math
 
