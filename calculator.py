@@ -41,3 +41,14 @@ def logarithm(a, b):
 # a to the power of b
 def exponent(a, b):
     return a ** b
+
+# square root of a
+# a cannot be < 0
+def square_root(a):
+    if a < 0:
+        raise ValueError
+    return math.sqrt(a)
+
+# hypotenuse of a and b
+def hypotenuse(a, b):
+    return math.hypot(a, b)
