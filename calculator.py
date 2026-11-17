@@ -8,24 +8,34 @@ calculator.py
 One function per operation, in order.
 """
 
-
 import math
 
 # a plus b
-def add(a, b): 
+def add(a, b):
     return a + b
 
 # a - b
 def subtract(a, b):
     return a - b
 
+def sub(a, b):
+    return a - b
+
 # a times b
 def multiply(a, b):
     return a * b
 
-# b divided by a 
+def mul(a, b):
+    return a * b
+
+# b divided by a
 # a cannot be 0
 def divide(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a
+
+def div(a, b):
     if a == 0:
         raise ZeroDivisionError
     return b / a
@@ -38,17 +48,15 @@ def logarithm(a, b):
         raise ValueError
     return math.log(b, a)
 
+def log(a, b):
+    if (a <= 0) or (b <= 0) or (a == 1):
+        raise ValueError
+    return math.log(b, a)
+
 # a to the power of b
 def exponent(a, b):
     return a ** b
 
-# square root of a
-# a cannot be < 0
-def square_root(a):
-    if a < 0:
-        raise ValueError
-    return math.sqrt(a)
+def exp(a, b):
+    return a ** b
 
-# hypotenuse of a and b
-def hypotenuse(a, b):
-    return math.hypot(a, b)
