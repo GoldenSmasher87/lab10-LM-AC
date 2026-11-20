@@ -1,12 +1,12 @@
+# https://github.com/GoldenSmasher87/lab10-LM-AC
+# Partner 1: Lucas Mattos
+# Partner 2: Abidul Chowdhury
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
-# https://github.com/GoldenSmasher87/lab10-LM-AC
-# Partner 1: Lucas Mattos
-# Partner 2: Abidul Chowdhury
 
 import math
 
@@ -26,18 +26,24 @@ def hypotenuse(a, b):
     return math.hypot(a, b)
 
 # a plus b
-def add(a, b): 
+def add(a, b):
     return a + b
 
 # a - b
 def subtract(a, b):
     return a - b
 
+def sub(a, b):
+    return a - b
+
 # a times b
 def multiply(a, b):
     return a * b
 
-# b divided by a 
+def mul(a, b):
+    return a * b
+
+# b divided by a
 # a cannot be 0
 def divide(a, b):
     try:
@@ -46,6 +52,11 @@ def divide(a, b):
         return b / a
     except ZeroDivisionError:
         print("Cannot divide by zero.")
+
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a
 
 # log(b) of base a
 # a cannot be 1
@@ -62,6 +73,15 @@ def logarithm(a, b):
     except ValueError as e:
         print(f"Cannot take logarithm: {e}")
 
+def log(a, b):
+    if (a <= 0) or (b <= 0) or (a == 1):
+        raise ValueError
+    return math.log(b, a)
+
 # a to the power of b
 def exponent(a, b):
     return a ** b
+
+def exp(a, b):
+    return a ** b
+
