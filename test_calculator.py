@@ -18,17 +18,21 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(mul(15, 5), 75)
+        self.assertEqual(mul(4, 6), 24)
+        self.assertEqual(mul(3, 37), 111)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        self.assertAlmostEqual(div(4, 8), 2.0)
+        self.assertAlmostEqual(div(3, 27), 9.0)
+        self.assertAlmostEqual(div(2, 45), 22.5)
     # ##########################
 
     ######## Partner 2
     def test_divide_by_zero(self):  # 1 assertion
         with self.assertRaises(ZeroDivisionError):
-            divide(0, 5)
+            div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
         self.assertAlmostEqual(logarithm(2, 8), 3.0)
@@ -41,21 +45,28 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
-    #     fill in code
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
+        self.assertAlmostEqual(hypotenuse(5, 12), 13.0)
+        self.assertAlmostEqual(hypotenuse(7, 24), 25.0)
 
-    # def test_sqrt(self): # 3 assertions
+    def test_sqrt(self): # 3 assertions
     #     # Test for invalid argument, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #    square_root(NUM)
+        with self.assertRaises(ValueError):
+            square_root(-9)
     #     # Test basic function
-    #     fill in code
+        self.assertAlmostEqual(square_root(9), 3.0)
+        self.assertAlmostEqual(square_root(169), 13.0)
+        self.assertAlmostEqual(square_root(25), 5.0)
     ##########################
 
 # Do not touch this
