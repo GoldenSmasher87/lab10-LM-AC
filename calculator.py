@@ -13,12 +13,9 @@ import math
 # sqrt(a)
 # a cannot be negative
 def square_root(a):
-    try:
-        if a < 0:
-            raise ValueError
-        return math.sqrt(a)
-    except ValueError:
-        print("Cannot take square root of a negative number.")
+    if a < 0:
+        raise ValueError
+    return math.sqrt(a)
 
 # hypontenuse with a and b
 # can have negative numbers
@@ -45,16 +42,9 @@ def div(a, b):
 # a cannot be 1
 # a and b cannot be <= 0
 def logarithm(a, b):
-    try:
-        if (a <= 0):
-            raise ValueError("a cannot be less than or equal to 0.")
-        elif (b <= 0):
-            raise ValueError("b cannot be less than or equal to 0.")
-        elif (a == 1):
-            raise ValueError("a cannot be 1.")
-        return math.log(b, a)
-    except ValueError as e:
-        print(f"Cannot take logarithm: {e}")
+    if (a <= 0) or (b <= 0) or (a == 1):
+        raise ValueError
+    return math.log(b, a)
 
 def log(a, b):
     if (a <= 0) or (b <= 0) or (a == 1):
