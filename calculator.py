@@ -43,16 +43,6 @@ def multiply(a, b):
 def mul(a, b):
     return a * b
 
-# b divided by a
-# a cannot be 0
-def divide(a, b):
-    try:
-        if a == 0:
-            raise ZeroDivisionError
-        return b / a
-    except ZeroDivisionError:
-        print("Cannot divide by zero.")
-
 def div(a, b):
     if a == 0:
         raise ZeroDivisionError
